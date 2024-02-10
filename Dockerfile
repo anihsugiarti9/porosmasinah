@@ -5,6 +5,8 @@ COPY requirements.txt /app/requirements.txt
 
 # Install the dependencies from the requirements.txt file
 RUN pip install -r /app/requirements.txt
+RUN apt-get wget
+RUN apt-get curl
 
 # Set working directory
 WORKDIR /app
